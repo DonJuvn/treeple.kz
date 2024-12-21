@@ -1,11 +1,10 @@
 import React from "react";
-
 const ThirdPage = () => {
-   return(
+   return (
       <div id="third-page">
-         ThirdPage
+         <div className="container">ThirdPage</div>
       </div>
-   )
-}
+   );
+};
 
-export default ThirdPage
+export default ThirdPage;

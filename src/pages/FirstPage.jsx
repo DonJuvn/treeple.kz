@@ -1,11 +1,10 @@
 import React from "react";
-
 const FirstPage = () => {
-   return(
+   return (
       <div id="first-page">
-         FirstPage
+         <div className="container">FirstPage</div>{" "}
       </div>
-   )
-}
+   );
+};
 
-export default FirstPage
+export default FirstPage;

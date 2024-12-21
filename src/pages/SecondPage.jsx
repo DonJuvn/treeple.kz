@@ -1,11 +1,10 @@
 import React from "react";
-
 const SecondPage = () => {
-   return(
+   return (
       <div id="second-page">
-         SecondPage
+         <div className="container">SecondPage</div>
       </div>
-   )
-}
+   );
+};
 
-export default SecondPage
+export default SecondPage;
