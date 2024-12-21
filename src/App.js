@@ -4,6 +4,7 @@ import FirstPage from "./pages/FirstPage";
 import SecondPage from "./pages/SecondPage";
 import ThirdPage from "./pages/ThirdPage";
 import Menu from "./components/menu";
+import Dropdown from "./components/dropdown";
 
 function App() {
    return (
@@ -11,6 +12,7 @@ function App() {
          <div className="App">
             <header className="App-header">
                <Menu />
+               <Dropdown />
             </header>
             <main>
                <Routes>
