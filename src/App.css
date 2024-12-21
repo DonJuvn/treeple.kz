@@ -4,7 +4,7 @@ html {
 body {
    font-family: "Geologica", sans-serif;
    max-width: 100vw;
-   overflow-x: hidden;
+   overflow: hidden;
    /* background-color: #494947; */
    background-color: #fffcff;
    /* background: linear-gradient(to bottom, #494947 30%, #fff 30%); */
@@ -175,14 +175,14 @@ body {
 }
 
 /* dropdown */
-#dropdown .container{
+#dropdown .container {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   align-items:flex-start;
-   padding-top: 3vh;
+   align-items: flex-start;
+   padding: 3vh 1vw 1vh;
 }
-#dropdown .dropdown-toggle{
+#dropdown .dropdown-toggle {
    font-size: 22px;
    font-weight: 500;
    font-family: "Geologica", sans-serif;
@@ -192,6 +192,7 @@ body {
    gap: 10px;
    align-items: center;
    cursor: pointer;
+   position: relative;
 }
 /* #dropdowm .dropdown-toggle img{
    transition: .5s;
@@ -199,41 +200,198 @@ body {
 /* #dropdown .dropdown-toggle:hover img{
    transform: translateY(2px);
 } */
-#dropdown ul li{
+#dropdown ul li {
    font-size: 16px;
    font-weight: 400;
    font-family: "Geologica", sans-serif;
    background-color: transparent;
-   cursor: pointer; 
-   transition: .1s; 
+   cursor: pointer;
+   transition: 0.1s;
 }
-#dropdown ul li:hover{
-   transform: scale(1.02);  
+#dropdown ul {
+   position: absolute;
 }
-#dropdown .actions{
+#dropdown ul li a {
+   text-decoration: none;
+   color: #000;
+}
+#dropdown ul li:hover {
+   transform: scale(1.01);
+}
+#dropdown .actions {
    display: flex;
    flex-direction: row;
    gap: 15px;
    align-items: center;
 }
-#dropdown .actions button{
+#dropdown .actions button {
    background-color: transparent;
    border: 1px solid #d9d9d9;
    border-radius: 25px;
    font-size: 14px;
-   font-family: 'Geologica', sans-serif;
+   font-family: "Geologica", sans-serif;
    font-weight: 400;
    display: flex;
    align-items: center;
    gap: 5px;
    padding: 7.5px 15px;
-   transition: .2s;
+   transition: 0.2s;
 }
-#dropdown .actions button:hover{
+#dropdown .actions button:hover {
    background-color: #fce9fd;
    cursor: pointer;
 }
-#dropdown .actions button img{
+#dropdown .actions button img {
    width: 16px;
    aspect-ratio: 1;
+}
+
+/* first page */
+#first-page {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   overflow-x: hidden;
+   height: 100vh;
+   /* max-height: 100vh; */
+}
+#first-page .left {
+   /* max-height: 100%; */
+   height: 78%;
+   width: 45%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 10vh 2vw;
+}
+#first-page .left .title {
+   display: flex;
+   flex-direction: column;
+}
+#first-page .left .mark {
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   align-items: center;
+   width: 95%;
+}
+#first-page .left .mark img {
+   width: 32px;
+   height: 38px;
+}
+#first-page .left #title {
+   font-size: 42px;
+   font-weight: 400;
+   font-family: "Geologica", sans-serif;
+}
+#first-page .left .chat {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+#first-page .left .chat .input {
+   display: flex;
+   flex-direction: column;
+   background-color: #fff;
+   border: 1px solid #000;
+   border-radius: 25px;
+   padding: 10px;
+}
+#first-page .left .chat .input input {
+   border: none;
+   width: 100%;
+   font-size: 18px;
+   font-family: "Geologica", sans-serif;
+}
+#first-page .left .chat .input input::placeholder {
+   color: #cacaca;
+}
+#first-page .left .chat .input .input-field:focus {
+   border: none;
+   outline: none;
+}
+/* #first-page .left .chat .input input.active{
+   border: 1px solid red;
+} */
+#first-page .left .chat .input .icons {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 10px;
+}
+#first-page .left .chat .input .icons img {
+   width: 24px;
+   aspect-ratio: 1;
+}
+#first-page .left .chat .input .icons .social-media {
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+}
+#first-page .left .chat #hint {
+   background-color: #f2f2f2;
+   color: #000;
+   font-family: "Geologica", sans-serif;
+   font-size: 16px;
+   border: none;
+   padding: 8px 20px;
+   width: fit-content;
+   border-radius: 15px;
+   margin-left: auto;
+}
+
+#first-page .right {
+   display: flex;
+   flex-direction: column;
+   width: 47%;
+}
+#first-page .right #main {
+   width: 130%;
+   height: 60%;
+   object-fit: cover;
+   margin-left: -10%;
+   border-radius: 10px 0 0 10px;
+}
+#first-page .right .get-started {
+   display: flex;
+   flex-direction: column;
+}
+#first-page .right .get-started .carousel {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   justify-content: space-between;
+}
+#first-page .right .get-started #get-started {
+   font-size: 28px;
+   font-weight: normal;
+   margin: 2vh 0;
+}
+#first-page .right .get-started .carousel img {
+   width: 100%;
+   aspect-ratio: 235/223;
+   height: 100%;
+   border-radius: 20px;
+}
+#first-page .right .get-started .carousel .item {
+   position: relative;
+   width: 30%;
+}
+#first-page .right .get-started .carousel .item p {
+   position: absolute;
+   bottom: 0;
+   margin-left: 10px;
+   color: #fff;
+   font-weight: 400;
+   z-index: 3;
+}
+#first-page .right .get-started .carousel .item .filter {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: #00000020;
+   z-index: 2;
+   top: 0;
+   border-radius: 20px;
 }

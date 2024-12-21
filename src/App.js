@@ -15,11 +15,13 @@ function App() {
                <Dropdown />
             </header>
             <main>
-               <Routes>
-                  <Route path="/" element={<FirstPage />} />
-                  <Route path="/second" element={<SecondPage />} />
-                  <Route path="/third" element={<ThirdPage />} />
-               </Routes>
+               <div className="container">
+                  <Routes>
+                     <Route path="/" element={<FirstPage />} />
+                     <Route path="/second" element={<SecondPage />} />
+                     <Route path="/third" element={<ThirdPage />} />
+                  </Routes>   
+               </div>
             </main>
          </div>
       </Router>
