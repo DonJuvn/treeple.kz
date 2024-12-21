@@ -655,3 +655,99 @@ body {
 #second-page #collage {
    height: 35%;
 }
+
+
+/* third page */
+/* second page */
+#third-page {
+   position: relative;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+#third-page .list {
+   position: absolute;
+   top: -40px;
+   left: 50%; /* Position relative to the horizontal center */
+   transform: translateX(-50%); /* Adjust for the element's width */
+   display: flex;
+   flex-direction: row;
+   border-radius: 15px;
+   border: 1px solid #000;
+}
+
+#third-page .list p {
+   border-right: 1px solid #828282;
+   border-left: 1px solid #828282;
+   padding: 5px 10px;
+   margin: 0 auto;
+}
+#third-page .list #none {
+   border-left: none;
+}
+#third-page .list #grey {
+   color: #828282;
+   border: none;
+}
+#third-page .left {
+   height: 80%;
+   width: 45%;
+   display: flex;
+   flex-direction: column;
+   padding: 2vh 2vw;
+}
+#third-page .left .list1 {
+   display: flex;
+   flex-direction: row;
+   border-radius: 15px;
+   border: 1px solid #000;
+   margin: auto;
+   width: fit-content;
+   gap: 10px;
+}
+#third-page .left .list1 p {
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   margin: 0;
+   border-radius: 15px;
+   padding: 5px 10px;
+   align-items: center;
+}
+#third-page .left .list1 #black {
+   background-color: #000;
+   color: #fff;
+}
+#third-page .left .list1 p img {
+   width: 16px;
+   aspect-ratio: 1;
+   object-fit: contain;
+}
+#third-page .left .tour {
+   display: flex;
+   flex-direction: row;
+   gap: 15px;
+   border-bottom: 1px solid #e5e5e5;
+   padding-bottom: 10px;
+   margin-top: 5vh;
+}
+#third-page .left .tour img {
+   width: 42px;
+   aspect-ratio: 1;
+   object-fit: contain;
+}
+#third-page .mark {
+   margin-top: 2vh;
+}
+#third-page .chat {
+   margin-top: 40vh;
+}
+#third-page .right{
+   display: flex;
+   flex-direction: column;
+   border-radius: 20px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 6px 20px rgba(0, 0, 0, 0.1);
+   width: 48%;
+   height: 100vh;
+}
