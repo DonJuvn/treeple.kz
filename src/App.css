@@ -19,161 +19,212 @@ body {
       max-width: 100vw;
    }
 }
-/* menu */
+/* General Menu Styling */
 #menu {
-   width: 16.5vw;
-   border-right: 1px solid #e5e5e5;
-   height: 96.3vh;
    position: fixed;
-   padding: 1.85vh 1.04vw;
+   top: 0;
+   left: 0;
+   height: 96.3vh;
+   transition: all 0.3s ease-in-out;
 }
-#menu #toggle {
+
+/* Menu States */
+#menu.menu-closed {
+   width: auto;
+   height: auto;
+   background-color: transparent;
+   box-shadow: none;
+   border-right: none;
+   z-index: 10;
+}
+
+#menu.menu-open {
+   width: 16.5vw;
+   background-color: #fff;
+   box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.1);
+   border-right: 1px solid #e5e5e5;
+   padding: 1.85vh 1.04vw;
+   z-index: 20;
+}
+
+/* Toggle Button */
+#toggle {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   background: none;
+   border: none;
+   cursor: pointer;
+   z-index: 30;
    display: none;
 }
-#menu .menu {
+
+#toggle img {
+   width: 24px;
+   height: 10px;
+}
+
+/* Menu Content */
+.menu {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    height: 100%;
 }
-.menu #logo {
-   /* width: 201px; */
+
+/* Logo */
+#menu #logo {
    width: 170px;
    margin-bottom: 4vh;
 }
+
+/* Navigation Links */
 .menu .navigation {
    display: flex;
    flex-direction: column;
 }
+
 .menu .navigation a {
-   text-decoration: none;
    display: flex;
-   flex-direction: row;
-   gap: 3%;
-   margin-bottom: 4vh;
-   font-size: 14px;
-   color: #000;
-   font-weight: 400;
    align-items: center;
+   gap: 10px;
+   text-decoration: none;
+   color: #000;
+   font-size: 14px;
+   font-weight: 400;
+   margin-bottom: 4vh;
+   transition: color 0.2s ease-in-out;
 }
+
+.menu .navigation a:hover {
+   color: #007BFF; /* Add hover color for better UI feedback */
+}
+
 .menu .navigation a img {
    width: 18px;
    aspect-ratio: 1;
 }
-.menu .navigation #new-chat {
+
+/* New Chat Button */
+#new-chat {
    display: flex;
-   width: 100%;
-   background-color: #f2f2f2;
-   border-radius: 25px;
-   border: none;
-   font-family: "Geologica", sans-serif;
    justify-content: center;
+   align-items: center;
+   width: 100%;
    padding: 8px;
    font-size: 14px;
+   font-family: "Geologica", sans-serif;
+   color: #000;
+   background-color: #f2f2f2;
+   border: none;
+   border-radius: 25px;
    margin-top: 1.5vh;
+   cursor: pointer;
+   transition: background-color 0.2s ease-in-out;
 }
+
+#new-chat:hover {
+   background-color: #e0e0e0;
+}
+
+/* Account Section */
 .menu .account {
    display: flex;
-   flex-direction: row;
    justify-content: space-between;
    align-items: center;
 }
+
+/* Avatar */
 .account .avatar {
    display: flex;
-   flex-direction: row;
-   gap: 5%;
    align-items: center;
+   gap: 10px;
 }
+
 .account .avatar img {
    width: 32px;
    aspect-ratio: 1;
+   border-radius: 50%;
 }
+
 .account .avatar p {
    font-size: 16px;
    font-weight: 400;
 }
+
+/* Dots (Three-dot menu) */
 .account .dots {
    display: flex;
-   flex-direction: row;
    gap: 8px;
 }
+
 .dots .dot {
-   background-color: #000;
-   border-radius: 100%;
    width: 6px;
    aspect-ratio: 1;
+   background-color: #000;
+   border-radius: 50%;
 }
+
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
-   #menu {
-      width: 90%;
-      border-right: none;
+   #menu.menu-open {
+      width: 80%;
+      padding: 6% 5%;
+      box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.3), 0px 6px 20px rgba(0, 0, 0, 0.3);
+      border-radius: 0 20px 20px 0;
+   }
+
+   #menu.menu-closed {
       position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 3;
+      width: auto;
    }
-   #menu #toggle {
+
+   #toggle{
       display: flex;
-      background-color: transparent;
-      border: none;
    }
-   #menu .menu {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-   }
-   .menu #logo {
-      width: 201px;
-      margin-bottom: 4vh;
-   }
-   .menu .navigation {
-      display: flex;
-      flex-direction: column;
-   }
-   .menu .navigation a {
-      text-decoration: none;
-      display: flex;
-      flex-direction: row;
-      gap: 5%;
-      margin-bottom: 4vh;
-      font-size: 18px;
-      color: #000;
-      font-weight: 400;
-      align-items: center;
-   }
-   .menu .navigation a img {
+   /* Toggle Button for Mobile */
+   #toggle img {
       width: 24px;
-      aspect-ratio: 1;
+      height: 24px;
    }
-   .menu .navigation #new-chat {
-      display: flex;
-      width: 100%;
-      background-color: #f2f2f2;
-      border-radius: 25px;
-      border: none;
-      font-family: "Geologica", sans-serif;
-      justify-content: center;
+
+   /* Logo */
+   #menu #logo {
+      width: 140px;
+      margin-bottom: 4vh;
+      margin-top: 10%;
+   }
+
+   /* Navigation Links */
+   .menu .navigation a {
+      gap: 12px;
+      font-size: 16px;
+   }
+
+   .menu .navigation a img {
+      width: 22px;
+   }
+
+   /* New Chat Button */
+   #new-chat {
       padding: 15px;
-      font-size: 18px;
-      margin-top: 1.5vh;
+      font-size: 16px;
    }
-   .account .avatar {
-      gap: 8%;
-   }
+
+   /* Account Section */
    .account .avatar img {
-      width: 32px;
+      width: 28px;
    }
+
    .account .avatar p {
       font-size: 14px;
    }
-   .account .dots {
-      gap: 4px;
-   }
+
    .dots .dot {
       width: 4px;
    }
 }
+
 
 /* dropdown */
 #dropdown .container {

@@ -1,5 +1,29 @@
-import React, { useState } from "react";const Menu = () => {
-   const [isMenuOpen, setIsMenuOpen] = useState(true);
+import React, { useState, useEffect } from "react";
+
+const Menu = () => {
+   // Dynamically determine the initial state
+   const [isMenuOpen, setIsMenuOpen] = useState(() => {
+      return window.innerWidth > 768; // Default to `true` for web (desktop) and `false` for mobile
+   });
+
+   // Handle screen resize to update the state dynamically
+   useEffect(() => {
+      const handleResize = () => {
+         if (window.innerWidth > 768) {
+            setIsMenuOpen(true); // Automatically open the menu on desktop
+         } else {
+            setIsMenuOpen(false); // Automatically close the menu on mobile
+         }
+      };
+
+      // Attach the resize listener
+      window.addEventListener("resize", handleResize);
+
+      // Cleanup the event listener on unmount
+      return () => {
+         window.removeEventListener("resize", handleResize);
+      };
+   }, []);
 
    const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
@@ -17,7 +41,7 @@ import React, { useState } from "react";const Menu = () => {
             {isMenuOpen && (
                <>
                   <div className="navigation">
-                     <img id='logo' src="img/logo.svg" alt="" />
+                     <img id="logo" src="img/logo.svg" alt="" />
                      <a href="#">
                         <img src="img/chats.png" alt="" />
                         Chats
