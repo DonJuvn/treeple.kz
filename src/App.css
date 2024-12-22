@@ -375,7 +375,7 @@ body {
 }
 .mark img {
    width: 32px;
-   height: 38px;
+   aspect-ratio: 32/38;
 }
 #first-page .left #title {
    font-size: 42px;
@@ -529,6 +529,7 @@ body {
       height: 50%;
       width: 94%;
       padding: 0 3vw;
+      margin-top: -10%;
    }
    .mark img {
       width: 48px;
@@ -560,9 +561,9 @@ body {
       margin-top: 5px;
    }
    .chat #hint {
-      font-size: 18px;
+      font-size: 14px;
       padding: 16px 40px;
-      margin-bottom: 5%;
+      margin-bottom: 2%;
    }
    #first-page .right {
       flex-direction: row;
@@ -713,6 +714,10 @@ body {
 }
 #second-page .mark {
    margin-top: 2vh;
+   align-items: start;
+}
+#second-page .mark img {
+   object-fit: contain;
 }
 #second-page .chat {
    margin-top: 12vh;
@@ -880,7 +885,91 @@ body {
 #second-page #collage {
    height: 35%;
 }
-
+#second-page .ritz {
+   display: none;
+}
+@media screen and (max-width: 768px) {
+   #second-page {
+      flex-direction: row;
+      height: 90vh;
+      justify-content: space-between;
+   }
+   #second-page .list {
+      display: none;
+   }
+   #second-page .left {
+      height: 80%;
+      width: 94%;
+      padding: 2vh 3vw;
+   }
+   #second-page .left .list1 {
+      margin: auto;
+      /* gap: 10px; */
+      border-radius: 30px;
+   }
+   #second-page .left .list1 p {
+      padding: 12px 8px;
+      border-radius: 30px;
+      align-items: center;
+      font-size: 12px;
+   }
+   #second-page .left .list1 p img {
+      width: 12px;
+   }
+   #second-page .left .tour {
+      gap: 10px;
+      padding-bottom: 3px;
+      margin-top: 5vh;
+   }
+   #second-page .left .tour p {
+      font-size: 14px;
+   }
+   #second-page .left .tour img {
+      width: 24px;
+   }
+   #second-page .mark {
+      margin-top: 2vh;
+      max-height: 200px;
+      /* overflow-y: hidden; */
+   }
+   #second-page .mark img {
+      width: 18px;
+      aspect-ratio: 32/38;
+      object-fit: contain;
+   }
+   #second-page .mark p {
+      font-size: 14px;
+      font-weight: 200;
+   }
+   #second-page .mark #none{
+      display: none;
+   }
+   #second-page .ritz {
+      display: flex;
+      flex-direction: column;
+      margin-left: 8%;
+      margin-top: 5%;
+   }
+   #second-page .ritz img {
+      width: 150px;
+   }
+   #second-page h1 {
+      font-size: 14px;
+      margin: 5px 0;
+      font-weight: 600;
+   }
+   #second-page p {
+      font-size: 12px;
+      margin: 0;
+      font-weight: 200;
+   }
+   #second-page .chat {
+      margin-top: 20vh;
+   }
+   #second-page .right {
+      display: none;
+   }
+}
 /* third page */
 /* second page */
 #third-page {
