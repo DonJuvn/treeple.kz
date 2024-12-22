@@ -97,7 +97,7 @@ body {
 }
 
 .menu .navigation a:hover {
-   color: #007BFF; /* Add hover color for better UI feedback */
+   color: #007bff; /* Add hover color for better UI feedback */
 }
 
 .menu .navigation a img {
@@ -170,7 +170,8 @@ body {
    #menu.menu-open {
       width: 80%;
       padding: 6% 5%;
-      box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.3), 0px 6px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.3),
+         0px 6px 20px rgba(0, 0, 0, 0.3);
       border-radius: 0 20px 20px 0;
    }
 
@@ -179,7 +180,7 @@ body {
       width: auto;
    }
 
-   #toggle{
+   #toggle {
       display: flex;
    }
    /* Toggle Button for Mobile */
@@ -224,7 +225,6 @@ body {
       width: 4px;
    }
 }
-
 
 /* dropdown */
 #dropdown .container {
@@ -301,6 +301,10 @@ body {
    padding: 7.5px 15px;
    transition: 0.2s;
 }
+
+#dropdown .actions button p {
+   margin: 0;
+}
 #dropdown .actions button:hover {
    background-color: #fce9fd;
    cursor: pointer;
@@ -308,6 +312,36 @@ body {
 #dropdown .actions button img {
    width: 16px;
    aspect-ratio: 1;
+}
+@media screen and (max-width: 768px) {
+   #dropdown .container {
+      padding: 0.5vh 1vw 1vh;
+      margin-left: 15%;
+      align-items: center;
+   }
+   #dropdown .dropdown-toggle {
+      font-size: 16px;
+      white-space: nowrap;
+   }
+   #dropdown .dropdown-toggle img {
+      display: none;
+   }
+   #dropdown ul {
+      width: 40%;
+      border-radius: 0 0 20px 20px;
+   }
+   #dropdown .actions {
+      gap: 10px;
+   }
+   #dropdown .actions button {
+      padding: 7.5px 15px;
+   }
+   #dropdown .actions #create{
+      border: none;
+   }
+   #dropdown .actions #create p{
+display: none;
+   }
 }
 
 /* first page */

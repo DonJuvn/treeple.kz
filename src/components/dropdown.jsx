@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 const Dropdown = () => {
    const [isOpen, setIsOpen] = useState(false);
    const [activeItem, setActiveItem] = useState("Almaty Travel Tips");
@@ -49,9 +48,9 @@ const Dropdown = () => {
             </div>
             <div className="actions">
                <button>Invite</button>
-               <button>
+               <button id="create">
                   <img src="img/create.png" alt="" />
-                  Create a tip
+                  <p>Create a tip</p>
                </button>
             </div>
          </div>
