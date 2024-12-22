@@ -18,7 +18,7 @@ const FirstPage = () => {
                <div className="input">
                   <input
                      type="text"
-                     placeholder="Ask anything..."
+                     placeholder="Where are we going today?"
                      className="input-field"
                   />
                   <div className="icons">
