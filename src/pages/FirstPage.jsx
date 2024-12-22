@@ -1,5 +1,4 @@
-import React from "react";
-const FirstPage = () => {
+import React from "react";const FirstPage = () => {
    return (
       <div id="first-page">
          <div className="left">
@@ -22,7 +21,7 @@ const FirstPage = () => {
                      className="input-field"
                   />
                   <div className="icons">
-                     <img id='create' src="img/create.png" alt="" />
+                     <img id="create" src="img/create.png" alt="" />
                      <div className="social-media">
                         <img src="img/voice.png" alt="" />
                         <img src="img/telegram.png" alt="" />
@@ -32,7 +31,11 @@ const FirstPage = () => {
             </div>
          </div>
          <div className="right">
-            <img id='main' src="img/travel-differently.png" alt="" />
+            <div className="travel">
+               <img id="main" src="img/travel-differently.png" alt="" />
+               <img id="play" src="img/play.png" alt="" />
+               <p>Travel differently.</p>
+            </div>
             <div className="get-started">
                <h3 id="get-started">Get started</h3>
                <div className="carousel">

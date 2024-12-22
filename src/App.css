@@ -336,11 +336,11 @@ body {
    #dropdown .actions button {
       padding: 7.5px 15px;
    }
-   #dropdown .actions #create{
+   #dropdown .actions #create {
       border: none;
    }
-   #dropdown .actions #create p{
-display: none;
+   #dropdown .actions #create p {
+      display: none;
    }
 }
 
@@ -443,13 +443,35 @@ display: none;
    display: flex;
    flex-direction: column;
    width: 47%;
+   height: 60%;
    margin-left: -10%;
 }
-#first-page .right #main {
+#first-page .right .travel #main {
    width: 130%;
-   height: 60%;
+   height: 100%;
    object-fit: cover;
    border-radius: 10px 0 0 10px;
+}
+#first-page .right .travel {
+   position: relative;
+   width: fit-content;
+   height: 100%;
+}
+#first-page .right .travel #play {
+   position: absolute;
+   bottom: 4%;
+   right: 0;
+   width: 48px;
+   aspect-ratio: 1;
+}
+#first-page .right .travel p {
+   position: absolute;
+   bottom: 4%;
+   left: 4%;
+   color: #fff;
+   font-size: 36px;
+   margin: 0;
+   font-weight: 400;
 }
 #first-page .right .get-started {
    display: flex;
@@ -494,6 +516,123 @@ display: none;
    border-radius: 20px;
 }
 
+@media screen and (max-width: 768px) {
+   #first-page {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      overflow-x: hidden;
+      height: 90vh;
+      /* max-height: 100vh; */
+   }
+   #first-page .left {
+      /* max-height: 100%; */
+      height: 50%;
+      width: 94%;
+      padding: 0 3vw;
+   }
+   .mark img {
+      width: 48px;
+      height: 57px;
+   }
+   #first-page .left #title {
+      font-size: 30px;
+   }
+   #first-page .left p {
+      font-size: 18px;
+      line-height: 25.59px;
+      margin: 0 0 0 2vw;
+   }
+   .chat .input {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 10px;
+      position: relative;
+   }
+   .chat .input input {
+      border: none;
+      width: 90%;
+      padding-left: 10%;
+   }
+   .chat .input .icons {
+      position: absolute;
+      top: 15px;
+      width: 95%;
+      margin-top: 5px;
+   }
+   .chat #hint {
+      font-size: 18px;
+      padding: 16px 40px;
+      margin-bottom: 5%;
+   }
+   #first-page .right {
+      flex-direction: row;
+      width: max-content;
+      margin-left: 0;
+      padding: 5%;
+      overflow-x: auto;
+      align-items: center;
+      height: 40%;
+      scrollbar-width: none;
+   }
+   #first-page .right .travel {
+      position: relative;
+      width: 320px;
+      height: 90%;
+   }
+   #first-page .right .travel #main {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+   }
+   #first-page .right .travel #play {
+      position: absolute;
+      margin: auto auto;
+      bottom: 50%;
+      top: 50%;
+      right: 45%;
+      left: 45%;
+      width: 54px;
+   }
+   #first-page .right .travel p {
+      bottom: 4%;
+      left: 4%;
+      font-size: 18px;
+      margin: 0;
+      font-weight: 400;
+   }
+   #first-page .right .get-started .carousel {
+      width: max-content;
+      height: 80%;
+      margin-left: 5%;
+   }
+   #first-page .right .get-started #get-started {
+      display: none;
+   }
+   #first-page .right .get-started .carousel .item {
+      width: 235px;
+      aspect-ratio: 235/223;
+      max-height: 223px;
+      border-radius: 20px;
+      position: relative;
+   }
+   #first-page .right .get-started .carousel img {
+      width: 235px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+   }
+   #first-page .right .get-started .carousel .item {
+      position: relative;
+      border-radius: 20px;
+      width: 30%;
+   }
+   #first-page .right .get-started .carousel .item .filter {
+      position: absolute;
+      width: 235px;
+      border-radius: 20px;
+   }
+}
 /* second page */
 #second-page {
    position: relative;
