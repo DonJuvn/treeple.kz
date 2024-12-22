@@ -376,6 +376,7 @@ body {
 .mark img {
    width: 32px;
    aspect-ratio: 32/38;
+   object-fit: contain;
 }
 #first-page .left #title {
    font-size: 42px;
@@ -941,7 +942,7 @@ body {
       font-size: 14px;
       font-weight: 200;
    }
-   #second-page .mark #none{
+   #second-page .mark #none {
       display: none;
    }
    #second-page .ritz {
@@ -971,7 +972,6 @@ body {
    }
 }
 /* third page */
-/* second page */
 #third-page {
    position: relative;
    width: 100%;
@@ -1063,4 +1063,111 @@ body {
    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 6px 20px rgba(0, 0, 0, 0.1);
    width: 48%;
    height: 100vh;
+}
+#third-page .right a{
+   width: 100%;
+   height: 100%;
+}
+#third-page .right a img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+   #third-page {
+      position: relative;
+      flex-direction: column;
+   }
+   #third-page .list {
+      display: none;
+   }
+   #third-page .left {
+      height: 80%;
+      width: 100%;
+   }
+   #third-page .left .list1 {
+      margin: auto;
+      /* gap: 10px; */
+      border-radius: 30px;
+   }
+   #third-page .left .list1 p {
+      padding: 12px 8px;
+      border-radius: 30px;
+      align-items: center;
+      font-size: 12px;
+   }
+   #third-page .left .list1 p img {
+      width: 12px;
+   }
+   #third-page .left .tour {
+      gap: 10px;
+      padding-bottom: 3px;
+      margin-top: 5vh;
+   }
+   #third-page .left .tour p {
+      font-size: 14px;
+   }
+   #third-page .left .tour img {
+      width: 24px;
+   }
+   #third-page .mark {
+      margin-top: 2vh;
+      max-height: 200px;
+      /* overflow-y: hidden; */
+   }
+   #third-page .mark img {
+      width: 18px;
+      aspect-ratio: 32/38;
+      object-fit: contain;
+   }
+   #third-page .mark p {
+      font-size: 14px;
+      font-weight: 200;
+   }
+   #third-page .mark #none {
+      display: none;
+   }
+   #third-page .chat {
+      position: absolute;
+      width: 96%;
+      bottom: 0;
+   }
+   .chat .input {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 10px;
+      position: relative;
+   }
+   .chat .input input {
+      border: none;
+      width: 90%;
+      padding-left: 10%;
+   }
+   .chat .input .icons {
+      position: absolute;
+      top: 15px;
+      width: 95%;
+      margin-top: 5px;
+   }
+   .chat #hint {
+      font-size: 14px;
+      padding: 16px 40px;
+      margin-bottom: 2%;
+   }
+   #third-page .right {
+      border-radius: 20px;
+      width: 100%;
+      overflow-y: hidden;
+      height: fit-content;
+   }
+   #third-page .right a {
+      display: flex;
+      width: 100%;
+      height: 40%;
+   }
+   #third-page .right a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
 }

@@ -54,7 +54,9 @@ import React from "react";const ThirdPage = () => {
             </div>
          </div>
          <div className="right">
-            <img src="img/map.png" alt="" />
+            <a href="https://www.google.kz/maps/place/Гастроном+ESENTAI+GOURMET/@43.218328,76.9256897,17z/data=!4m14!1m7!3m6!1s0x38836f30f33672fb:0x68240eda7dfa686a!2z0JPQsNGB0YLRgNC-0L3QvtC8IEVTRU5UQUkgR09VUk1FVA!8m2!3d43.218328!4d76.92827!16s%2Fg%2F12m9l5q3l!3m5!1s0x38836f30f33672fb:0x68240eda7dfa686a!8m2!3d43.218328!4d76.92827!16s%2Fg%2F12m9l5q3l?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
+               <img src="img/map.png" alt="" />
+            </a>
          </div>
       </div>
    );
