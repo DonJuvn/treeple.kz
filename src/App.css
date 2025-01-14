@@ -343,7 +343,75 @@ body {
       display: none;
    }
 }
+/* FirstPage.css */
+#first-page {
+   display: flex;
+   height: 100vh;
+   position: relative;
+}
 
+.left {
+   flex: 0 0 550px;
+   padding: 20px;
+   border-right: 1px solid #e0e0e0;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   position: relative;
+}
+
+.title {
+   margin-bottom: 20px;
+}
+
+.chat {
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   overflow-y: auto;
+   padding-bottom: 10px;
+}
+
+.chat-messages {
+   display: flex;
+   flex-direction: column;
+   overflow-y: auto;
+   padding-bottom: 10px;
+}
+
+.chat-input-container {
+   padding: 10px;
+   background: #fff;
+   display: flex;
+   border-top: 1px solid #e0e0e0;
+   border-radius: 5px;
+}
+
+.chat-input-container input {
+   flex: 1;
+   border-radius: 5px;
+}
+
+.chat-message {
+   padding: 10px;
+   margin-bottom: 5px;
+   border-radius: 5px;
+   max-width: 80%;
+}
+
+.user-message {
+   background-color: #e0f7fa;
+   align-self: flex-end;
+   margin-left: auto;
+   text-align: right;
+}
+
+.bot-message {
+   background-color: #f0f0f0;
+   align-self: flex-start;
+   margin-right: auto;
+   text-align: left;
+}
 /* first page */
 #first-page {
    display: flex;
@@ -721,7 +789,7 @@ body {
    object-fit: contain;
 }
 #second-page .chat {
-   margin-top: 12vh;
+   margin-top: 5vh;
 }
 #second-page .right {
    display: flex;
@@ -798,6 +866,7 @@ body {
 }
 #second-page .right .bottom .left {
    width: 60%;
+   max-width: 60%;
    padding: 0 0 1.5vh 0;
    border-bottom: 1px solid #000;
    height: fit-content;
@@ -849,18 +918,20 @@ body {
    border-right: 1px solid #878787;
    border-radius: 15px 0 0 0;
    padding: 5px 10px;
-   width: 50%;
+   width: 42%;
+   max-width: 42%;
    border-bottom: none;
 }
 #second-page .right .bottom .right .check .right {
    border-radius: 15px 15px 0 0;
    border: none;
    padding: 5px 10px;
-   width: 50%;
+   width: 42%;
+   min-width: 42%;
    box-shadow: none;
 }
 #second-page .right .bottom .right .check p {
-   font-size: 16px;
+   font-size: 14px;
    color: #878787;
 }
 #second-page .right .bottom .right .check #black {
@@ -1064,11 +1135,11 @@ body {
    width: 48%;
    height: 100vh;
 }
-#third-page .right a{
+#third-page .right a {
    width: 100%;
    height: 100%;
 }
-#third-page .right a img{
+#third-page .right a img {
    width: 100%;
    height: 100%;
    object-fit: cover;
