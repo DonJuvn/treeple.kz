@@ -1,6 +1,13 @@
-import React from "react";const FirstPage = () => {
+import React from "react";
+const FirstPage = () => {
    return (
       <div id="first-page">
+         <div className="list">
+            <p id="none">Almaty</p>
+            <p id="grey">When</p>
+            <p>2 travelers</p>
+            <p id="grey">Budget</p>
+         </div>
          <div className="left">
             <div className="title">
                <h1 id="title">Where to today?</h1>
